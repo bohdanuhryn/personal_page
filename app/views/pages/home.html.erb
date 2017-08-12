@@ -154,7 +154,7 @@
               <%= p.title %>
             </div>
             <div id="project_view_image" class="project_hovered">
-              <img src="<% p.image_url %>" class="img-thumbnail" style="margin: 0; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); max-height: 256px; max-width: 256px;"/>
+              <%= image_tag p.image_url, class: "img-thumbnail", style: "margin: 0; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); max-height: 256px; max-width: 256px;" %>
             </div>
             <div style="text-align: left; margin: 5px" class="project_hovered">
               <%= p.description %>
