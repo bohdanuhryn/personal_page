@@ -1,0 +1,41 @@
+uk:
+  html_head_title: "Угриновський Богдан - персональна сторінка"
+  header_title: "Богдан Угриновський"
+  header_language: "Мова"
+  menu_namecard: "Про мене"
+  menu_portfolio: "Портфоліо"
+  menu_contacts: "Контакти"
+  menu_blog: "Блог"
+  menu_old_site: "Старий сайт"
+  footer_copyright: "Угриновський Богдан"
+
+  news_title: "News"
+
+  portfolio_project_download: "Download"
+  portfolio_project_categories: "Categories"
+
+  namecard_header_1: "Вітаю! Я, Угриновський Богдан, фрілансер, студент НУ 'ЛП' кафедри 'Програмне забезпечення'"
+  namecard_header_2: "Спеціаліст з розробки додатків для операційної системи Windows та мобільної платформи Android."
+  namecard_header_3: "Особливо захоплює створення власних ігор :)"
+
+  services_title: "Services"
+  services_1: "Mobile apps development for Android"
+  services_2: "Windows apps development"
+  services_3: "Web-pages development"
+
+  services_technologies_title: "Technologies and tools"
+  services_technologies_1: "Languages:"
+  services_technologies_2: "Platforms:"
+  services_technologies_3: "Other:"
+
+  contacts_title: "Contact me"
+  contacts_send_email: "Send e-mail:"
+  contacts_send_email_name: "Name"
+  contacts_send_email_enter_your_message: "Enter your message . . . "
+  contacts_send_email_send: "Send"
+  contacts_soc_networks: "Social networks:"
+  contacts_contacts: "Contacts:"
+
+  common_back_to_top: "Back to top"
+
+  hello: "Hello world"

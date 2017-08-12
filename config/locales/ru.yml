@@ -1,0 +1,72 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+ru:
+  html_head_title: "Угриновский Богдан - личьная страница"
+  header_title: "Богдан Угриновский"
+  header_language: "Язык"
+  menu_namecard: "Обо мне"
+  menu_portfolio: "Портфолио"
+  menu_contacts: "Контакты"
+  menu_blog: "Блог"
+  menu_old_site: "Старый сайт"
+  footer_copyright: "Угриновский Богдан"
+
+  news_title: "News"
+
+  portfolio_project_download: "Download"
+  portfolio_project_categories: "Categories"
+
+  namecard_header_1: "Здравствуйте! Я, Угриновский Богдан, фрилансер, студент НУ 'ЛП' кафедры 'Програмное обеспечение'."
+  namecard_header_2: "Специалист в разработке программ для операционной системы Windows и мобильной платформы Android."
+  namecard_header_3: "Также меня интересует разработка игр, есть свои разработки и идеи :)"
+
+  services_title: "Services"
+  services_1: "Mobile apps development for Android"
+  services_2: "Windows apps development"
+  services_3: "Web-pages development"
+
+  services_technologies_title: "Technologies and tools"
+  services_technologies_1: "Languages:"
+  services_technologies_2: "Platforms:"
+  services_technologies_3: "Other:"
+
+  contacts_title: "Contact me"
+  contacts_send_email: "Send e-mail:"
+  contacts_send_email_name: "Name"
+  contacts_send_email_enter_your_message: "Enter your message . . . "
+  contacts_send_email_send: "Send"
+  contacts_soc_networks: "Social networks:"
+  contacts_contacts: "Contacts:"
+
+  common_back_to_top: "Back to top"
+
+  hello: "Hello world"

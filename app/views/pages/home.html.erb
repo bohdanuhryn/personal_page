@@ -45,20 +45,20 @@
         <li><a href="#portfolio"><%= t('menu_portfolio') %></a></li>
         <li><a href="#contacts"><%= t('menu_contacts') %></a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle nopadding" data-toggle="dropdown" >
-            <% if :locale == 'ru' %>
-                Русский
-            <% elsif :locale == 'ua' %>
+          <a href="#" class="dropdown-toggle nopadding" data-toggle="dropdown" role="button" aria-expanded="false">
+            <% if params[:locale].nil? || params[:locale] == :en %>
+                English
+            <% elsif params[:locale] == :uk %>
                 Українська
             <% else %>
-                English
+                Русский
             <% end %>
             <span class="caret"></span>
           </a>
-          <ul class="dropdown-menu" role="menu">
-            <li><%= link_to "English", { :locale => 'en' } %></li>
-            <li><%= link_to "Русский", { :locale => 'ru' } %></li>
-            <li><%= link_to "Українська", { :locale => 'ua' } %></li>
+          <ul class="dropdown-menu">
+            <li><%= link_to "English", { :locale => :en } %></li>
+            <li><%= link_to "Русский", { :locale => :ru } %></li>
+            <li><%= link_to "Українська", { :locale => :uk } %></li>
           </ul>
         </li>
       </ul>
