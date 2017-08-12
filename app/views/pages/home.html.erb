@@ -1,0 +1,277 @@
+<html>
+<head>
+  <title></title>
+
+  <meta charset="windows-1251">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="title" content="<%= t('header_title') %>>" />
+  <meta name="description" content="Portfolio" />
+
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+  <script src="jquery-1.11.1.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="validateSendMail.js"></script>
+  <script>
+      $(function(){
+          $('#lang_select').on('change', function () {
+              var url = $(this).val();
+              if (url) {
+                  window.location = url;
+              }
+              return false;
+          });
+      });
+  </script>
+</head>
+
+<body>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><%= t('header_title') %></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#services"><%= t('services_title') %></a></li>
+        <li><a href="#portfolio"><%= t('menu_portfolio') %></a></li>
+        <li><a href="#contacts"><%= t('menu_contacts') %></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle nopadding" data-toggle="dropdown" >
+            <% if :locale == 'ru' %>
+                Русский
+            <% elsif :locale == 'ua' %>
+                Українська
+            <% else %>
+                English
+            <% end %>
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><%= link_to "English", { :locale => 'en' } %></li>
+            <li><%= link_to "Русский", { :locale => 'ru' } %></li>
+            <li><%= link_to "Українська", { :locale => 'ua' } %></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="namecard">
+  <div class="container" style="width:90%; margin: 10px auto">
+    <p style="font-size:14pt; margin: 10px; vertical-align: middle">
+      <%= image_tag("bohdanuhryn.jpg", class: "img-circle", width: "180px", style: "float:left; margin-right:10px") %>
+    <p style="font-size: 14pt"><%= t('namecard_header_1') %></p>
+    <p style="font-size: 14pt"><%= t('namecard_header_2') %></p>
+    <p style="font-size: 14pt"><%= t('namecard_header_3') %></p>
+    </p>
+  </div>
+</div>
+
+<div class="container-fluid" id="services">
+  <div class="part_header well">
+    <%= t('services_title') %>
+  </div>
+  <div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10">
+      <div class="col-xs-4">
+        <a href="#portfolio" class="nounderline">
+          <div class="outline-rect hovered">
+            <%= image_tag "mobile_dev.png", width: "100px", height: "100px" %>
+            <div><%= t('services_1') %></div>
+          </div>
+        </a>
+      </div>
+      <div class="col-xs-4">
+        <a href="#portfolio" class="nounderline">
+          <div class="outline-rect hovered">
+            <%= image_tag "windows_dev.png", width: "100px", height: "100px" %>
+            <div><%= t('services_2') %></div>
+          </div>
+        </a>
+      </div>
+      <div class="col-xs-4">
+        <a href="#portfolio" class="nounderline">
+          <div class="outline-rect hovered">
+            <%= image_tag "web_dev.png", width: "100px", height: "100px" %>
+            <div><%= t('services_3') %></div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-1"></div>
+  </div>
+
+  <h3 class="text-center"><%= t('services_technologies_title') %></h3>
+
+  <div class="row">
+    <div class="col-xs-2"></div>
+    <div class="col-xs-8">
+      <div class="container-fluid outline-rect">
+        <%= image_tag "Cpp.png", class: "img-tool" %>
+        <%= image_tag "Java.png", class: "img-tool" %>
+        <%= image_tag "Csharp.png", class: "img-tool" %>
+        <%= image_tag "php.png", class: "img-tool" %>
+        <%= image_tag "js.png", class: "img-tool" %>
+        <%= image_tag "css.png", class: "img-tool" %>
+        <%= image_tag "html.png", class: "img-tool" %>
+      </div>
+
+      <div class="container-fluid outline-rect">
+        <%= image_tag "android.png", class: "img-tool" %>
+        <%= image_tag "windows.png", class: "img-tool" %>
+      </div>
+
+      <div class="container-fluid outline-rect">
+        <%= image_tag "sql_server.png", class: "img-tool" %>
+        <%= image_tag "mysql.png", class: "img-tool" %>
+        <%= image_tag "sqllite.png", class: "img-tool" %>
+      </div>
+    </div>
+    <div class="col-xs-2"></div>
+  </div>
+</div>
+
+<div class="container-fluid" id="portfolio">
+  <div class="part_header well">
+    <%= t('menu_portfolio') %>
+  </div>
+  <div class="container-fluid" id="project_views">
+    <% @projects.each do |p| %>
+        <div class="container-fluid nounderline hovered outline-rect" id="project_view">
+          <a class="nounderline" href="<% p.web_url %>" target="_blank">
+            <div class="text-center project_hovered">
+              <%= p.title %>
+            </div>
+            <div id="project_view_image" class="project_hovered">
+              <img src="<% p.image_url %>" class="img-thumbnail" style="margin: 0; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); max-height: 256px; max-width: 256px;"/>
+            </div>
+            <div style="text-align: left; margin: 5px" class="project_hovered">
+              <%= p.description %>
+            </div>
+            <div class="text-right project_hovered">
+              <% "categories" %>
+            </div>
+          </a>
+        </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="container-fluid" id="contacts">
+  <div class="part_header well">
+    <%= t('contacts_title') %>
+  </div>
+  <div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-5 outline-rect">
+      <div class="text-center"><h4>
+        <%= t('contacts_send_email') %>
+      </h4></div>
+      <form action="mail.php" method="post" onsubmit="return validateSendMail();">
+        <div class="row">
+          <div class="form-group col-xs-6">
+            <input type="text" id="yname" name="name" placeholder="<%= t('contacts_send_email_name') %>">
+          </div>
+          <div class="form-group col-xs-6">
+            <input type="text" id="yemail" name="email" placeholder="E-mail">
+          </div>
+        </div>
+        <textarea class="form-control" placeholder="<%= t('contacts_send_email_enter_your_message') %>" rows="5" id="ymessage" name="message"></textarea>
+        <input type="submit" id="send_mail_button" value="<%= t('contacts_send_email_send') %>">
+      </form>
+      <div class="text-center" id="mail_result" style="color: red;"></div>
+    </div>
+    <div class="col-xs-5">
+      <div class="text-center outline-rect">
+        <h4><%= t('contacts_soc_networks') %> </h4>
+        <div>
+          <a href="https://vk.com/bodasoft" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa fa-vk fa-stack-1x fa-inverse"></i>
+                </span>
+          </a>
+          <a href="https://www.facebook.com/bohdan.uhrynovskiy" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+          </a>
+          <a href="https://github.com/bohdanuhryn" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+          </a>
+          <a href="https://www.linkedin.com/in/bohdan-uhrynovskyi-2816b1107" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+          </a>
+        </div>
+      </div>
+      <div class="outline-rect" style="padding-top: 10px;">
+        <h4 class="text-center"><%= t('contacts_contacts') %></h4>
+        <div class="row" style="margin-bottom: 10px;">
+          <div class="col-xs-2"></div>
+          <div class="col-xs-2 text-right"><i class="fa fa-envelope" aria-hidden="true"></i>:</div>
+          <div class="col-xs-4 text-left">bohdanuhryn@gmail.com</div>
+          <div class="col-xs-4"></div>
+        </div>
+        <div class="row" style="margin-bottom: 10px;">
+          <div class="col-xs-2"></div>
+          <div class="col-xs-2 text-right"><i class="fa fa-skype" aria-hidden="true"></i>:</div>
+          <div class="col-xs-4 text-left">bodasoft2</div>
+          <div class="col-xs-4"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-1"></div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <%= t('footer_copyright') %> (с) <%= Date.today.year %>
+</footer>
+
+<div class="back-to-top">
+    <span>
+      <a href="#" class="well well-sm">
+        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+        <%= t('common_back_to_top') %>
+      </a>
+    </span>
+</div>
+
+<script type="text/javascript">
+    var amountScrolled = 300;
+
+    $(window).scroll(function() {
+        if ( $(window).scrollTop() > amountScrolled ) {
+            $('div.back-to-top').fadeIn('slow');
+        } else {
+            $('div.back-to-top').fadeOut('slow');
+        }
+    });
+
+    $('div.back-to-top').click(function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 700);
+        return false;
+    });
+</script>
+</body>
+</html>

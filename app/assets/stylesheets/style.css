@@ -1,0 +1,156 @@
+@charset "utf-8";
+/*-------------------------------------------------------------*/
+/* CSS Document                                                */
+/* Template Name: Personal page                                */
+/* Designed By: Bohdan Uhrynovskiy                             */
+/*-------------------------------------------------------------*/
+/*--
+#003082
+#4c6ea7
+#99accd
+#e5eaf2
+#eff2f7
+#aaaaaa
+*/
+
+body {
+}
+
+p, h1, h2, h3  {
+  letter-spacing: 1px;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.input-invalid {
+  color: red;
+}
+
+.part_header {
+  letter-spacing: 2px;
+  margin: 10px 40px 10px 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 16pt;
+}
+
+.outline-rect {
+  border-width: 1px;
+  border-color: #c8c8c8;
+  border-style: solid;
+  background-color: #fafafa;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;  
+}
+
+.img-tool {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+
+.margin  {
+  margin-bottom: 45px;
+}
+
+.container-fluid {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 0;
+  border-radius: 0;
+  margin: 10px 40px 10px 40px;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.navbar-nav  li a:hover {
+  color: #1abc9c !important;
+}
+
+/* unvisited link */
+a.nounderline:link {
+  color: #111111;
+}
+
+/* visited link */
+a.nounderline:visited {
+  color: #111111;
+  text-decoration: none;
+}
+
+a.nounderline:hover{
+  text-decoration: none;
+  color: #1abc9c;
+  background: #eff2f7;
+}
+
+.hovered:hover {
+  background: #eff2f7;
+}
+
+.vertical-center {
+  display:inline-block;
+  float:none;
+}
+
+.container-fluid  {
+  margin: 10px;
+  padding: 10px;
+}
+
+div.back-to-top {
+  display: none;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+}
+
+#project_views {
+  text-align: center;
+}
+
+#project_view {
+  width: 300px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  font-size: 16px;
+  letter-spacing: 1px;
+  word-wrap: break-word;
+}
+
+#project_view_image {
+  height: 256px;
+  position: relative;
+}
