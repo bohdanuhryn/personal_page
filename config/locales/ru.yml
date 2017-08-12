@@ -49,24 +49,26 @@ ru:
   namecard_header_2: "Специалист в разработке программ для операционной системы Windows и мобильной платформы Android."
   namecard_header_3: "Также меня интересует разработка игр, есть свои разработки и идеи :)"
 
-  services_title: "Services"
-  services_1: "Mobile apps development for Android"
-  services_2: "Windows apps development"
-  services_3: "Web-pages development"
+  services_title: "Услуги"
+  services_1: "Разработка мобильных приложений для  Android"
+  services_2: "Разработка приложений для Windows"
+  services_3: "Резработка Веб-страниц"
 
-  services_technologies_title: "Technologies and tools"
-  services_technologies_1: "Languages:"
-  services_technologies_2: "Platforms:"
-  services_technologies_3: "Other:"
+  services_technologies_title: "Технологии и инструменты"
+  services_technologies_1: "Языки:"
+  services_technologies_2: "Платформы:"
+  services_technologies_3: "Другое:"
 
-  contacts_title: "Contact me"
-  contacts_send_email: "Send e-mail:"
-  contacts_send_email_name: "Name"
-  contacts_send_email_enter_your_message: "Enter your message . . . "
-  contacts_send_email_send: "Send"
-  contacts_soc_networks: "Social networks:"
-  contacts_contacts: "Contacts:"
+  contacts_title: "Связь"
+  contacts_send_email: "Отправить сообщение:"
+  contacts_send_email_name: "Имя"
+  contacts_send_email_enter_your_message: "Ваше сообщение . . . "
+  contacts_send_email_send: "Отправить"
+  contacts_soc_networks: "Социальные сети:"
+  contacts_contacts: "Контакты:"
 
-  common_back_to_top: "Back to top"
+  common_back_to_top: "Вверх"
 
-  hello: "Hello world"
+  time:
+   formats:
+     long: "%Y-%m-%d %H:%M:%S"

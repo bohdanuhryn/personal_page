@@ -18,24 +18,26 @@ uk:
   namecard_header_2: "Спеціаліст з розробки додатків для операційної системи Windows та мобільної платформи Android."
   namecard_header_3: "Особливо захоплює створення власних ігор :)"
 
-  services_title: "Services"
-  services_1: "Mobile apps development for Android"
-  services_2: "Windows apps development"
-  services_3: "Web-pages development"
+  services_title: "Послуги"
+  services_1: "Розробка мобільних додатків Android"
+  services_2: "Розробка додатків ОС Windows"
+  services_3: "Розробка веб-сторінок"
 
-  services_technologies_title: "Technologies and tools"
-  services_technologies_1: "Languages:"
-  services_technologies_2: "Platforms:"
-  services_technologies_3: "Other:"
+  services_technologies_title: "Технології та інструменти"
+  services_technologies_1: "Мови:"
+  services_technologies_2: "Платформи:"
+  services_technologies_3: "Інше:"
 
-  contacts_title: "Contact me"
-  contacts_send_email: "Send e-mail:"
-  contacts_send_email_name: "Name"
-  contacts_send_email_enter_your_message: "Enter your message . . . "
-  contacts_send_email_send: "Send"
-  contacts_soc_networks: "Social networks:"
-  contacts_contacts: "Contacts:"
+  contacts_title: "Зв'язок"
+  contacts_send_email: "Надіслати повідомлення:"
+  contacts_send_email_name: "Ім'я"
+  contacts_send_email_enter_your_message: "Введіть своє повідмлення . . . "
+  contacts_send_email_send: "Надіслати"
+  contacts_soc_networks: "Соціальні мережі:"
+  contacts_contacts: "Контакти:"
 
-  common_back_to_top: "Back to top"
+  common_back_to_top: "Вгору"
 
-  hello: "Hello world"
+  time:
+   formats:
+     long: "%Y-%m-%d %H:%M:%S"

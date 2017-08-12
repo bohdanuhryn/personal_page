@@ -7,13 +7,6 @@
   <meta name="title" content="<%= t('header_title') %>>" />
   <meta name="description" content="Portfolio" />
 
-  <link rel="stylesheet" type="text/css" href="style.css" />
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-
-  <script src="jquery-1.11.1.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="validateSendMail.js"></script>
   <script>
       $(function(){
           $('#lang_select').on('change', function () {
@@ -46,9 +39,9 @@
         <li><a href="#contacts"><%= t('menu_contacts') %></a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle nopadding" data-toggle="dropdown" role="button" aria-expanded="false">
-            <% if params[:locale].nil? || params[:locale] == :en %>
+            <% if params.has_key?(:locale) == false || params[:locale] == 'en' %>
                 English
-            <% elsif params[:locale] == :uk %>
+            <% elsif params[:locale] == 'uk' %>
                 Українська
             <% else %>
                 Русский
@@ -149,7 +142,7 @@
   <div class="container-fluid" id="project_views">
     <% @projects.each do |p| %>
         <div class="container-fluid nounderline hovered outline-rect" id="project_view">
-          <a class="nounderline" href="<% p.web_url %>" target="_blank">
+          <a class="nounderline" href="<%= p.web_url %>" target="_blank">
             <div class="text-center project_hovered">
               <%= p.title %>
             </div>
@@ -194,7 +187,7 @@
       <div class="text-center" id="mail_result" style="color: red;"></div>
     </div>
     -->
-    <div class="col-xs-5">
+    <div class="col-xs-10">
       <div class="text-center outline-rect">
         <h4><%= t('contacts_soc_networks') %> </h4>
         <div>
