@@ -1,26 +1,3 @@
-<html>
-<head>
-  <title></title>
-
-  <meta charset="windows-1251">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="title" content="<%= t('header_title') %>>" />
-  <meta name="description" content="Portfolio" />
-
-  <script>
-      $(function(){
-          $('#lang_select').on('change', function () {
-              var url = $(this).val();
-              if (url) {
-                  window.location = url;
-              }
-              return false;
-          });
-      });
-  </script>
-</head>
-
-<body>
 <nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
@@ -108,12 +85,13 @@
   <h3 class="text-center"><%= t('services_technologies_title') %></h3>
 
   <div class="row">
-    <div class="col-xs-2"></div>
-    <div class="col-xs-8">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10">
       <div class="container-fluid outline-rect">
-        <%= image_tag "Cpp.png", class: "img-tool" %>
         <%= image_tag "Java.png", class: "img-tool" %>
+        <%= image_tag "Cpp.png", class: "img-tool" %>
         <%= image_tag "Csharp.png", class: "img-tool" %>
+        <%= image_tag "ruby.png", class: "img-tool" %>
         <%= image_tag "php.png", class: "img-tool" %>
         <%= image_tag "js.png", class: "img-tool" %>
         <%= image_tag "css.png", class: "img-tool" %>
@@ -129,9 +107,10 @@
         <%= image_tag "sql_server.png", class: "img-tool" %>
         <%= image_tag "mysql.png", class: "img-tool" %>
         <%= image_tag "sqllite.png", class: "img-tool" %>
+        <%= image_tag "postgresql.png", class: "img-tool" %>
       </div>
     </div>
-    <div class="col-xs-2"></div>
+    <div class="col-xs-1"></div>
   </div>
 </div>
 
@@ -146,8 +125,8 @@
             <div class="text-center project_hovered">
               <%= p.title %>
             </div>
-            <div id="project_view_image" class="project_hovered">
-              <%= image_tag p.image_url, class: "img-thumbnail", style: "margin: 0; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); max-height: 256px; max-width: 256px;" %>
+            <div id="project_view_image" class="project_hovered" style="min-width: 100px">
+              <%= image_tag p.image_url, class: "img-thumbnail", style: "display: block; margin: 0 auto; max-height: 256px; max-width: 256px;" %>
             </div>
             <div style="text-align: left; margin: 5px" class="project_hovered">
               <%= p.description %>
@@ -268,5 +247,3 @@
         return false;
     });
 </script>
-</body>
-</html>
